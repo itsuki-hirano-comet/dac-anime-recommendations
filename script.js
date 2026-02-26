@@ -1,55 +1,54 @@
 (function(){
+    'use strict';
     console.log('reading js');
+    let answers = [];
+    let counter = 0;
+    let answerString = '';
+    let nextQuestion = '';
 
     window.addEventListener('load', function(){
-        displayQuestion(1);
+        changeDisplay("-1");
     });
 
-    function displayQuestion(questionID) {
+    function changeDisplay(questionID) {
         const question = document.querySelector(`#q${questionID}`);
-        // const option1 = document.querySelector(`#q${questionID} .answer1`);
-        // const option2 = document.querySelector(`#q${questionID} .answer2`);
         const options = document.querySelectorAll(`#q${questionID} .options div`)
 
-        question.className = 'on'
-        // console.log(option1);
-        // option1.addEventListener('click', function(event){
-        //     question.className = 'off';
-        //     // console.log('option 1 chosen');
-        //     const answerID = this.id;
-        //     console.log(answerID)
-        //     if (questionID >= 4) {
-        //         document.querySelector(`#result${answerID}`).className = 'resultOn'
-        //     } else {
-        //         displayQuestion(answerID);
-        //     }
-        // });
+        question.className = 'on';
 
-        // option2.addEventListener('click', function(event){
-        //     question.className = 'off';
-        //     // console.log('option 1 chosen');
-        //     const answerID = this.id;
-        //     console.log(answerID)
-        //     if (questionID >= 4) {
-        //         document.querySelector(`#result${answerID}`).className = 'resultOn'
-        //     } else {
-        //         displayQuestion(answerID);
-        //     }
-        // });
         for (const eachOption of options) {
-            eachOption.addEventListener('click', function(event){
+            eachOption.addEventListener('click', function(){
                 question.className = 'off';
                 // console.log('option 1 chosen');
                 const answerID = this.id;
-                console.log(answerID)
-                if (questionID >= 4) {
-                    document.querySelector(`#result${answerID}`).className = 'resultOn'
+                const answerClass = this.className;
+
+                // console.log(this.className);
+
+                answers[counter] = answerID;
+                counter++;
+                answerString = `${answerString}-${answerID}`;
+
+                console.log(answerString);
+                // console.log(answerID)
+                if (answerClass === 'answerFinal') {  
+                    document.querySelector(`#r${answerString}`).className = 'resultOn';
                 } else {
-                    displayQuestion(answerID);
+                    questionSelector(answerID);  
+                    // console.log(nextQuestion); 
+                    changeDisplay(nextQuestion);
                 }
             });
-        }
+        }     
+    }
 
-        
+    function questionSelector(answerID) {
+        if (counter === 1) {
+            nextQuestion = '-2';
+        } else if (answerID === 'action') {
+            nextQuestion = '-complete';
+        } else {
+            nextQuestion = answerString;
+        }
     }
 }());

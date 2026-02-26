@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>test function variable output</title>
+</head>
+<body>
+    <h1>testing</h1>
+    <button>click me</button>
+    
+    <script>
+        (function(){
+            console.log('reading js');
+            let counter = 0;
+
+            document.querySelector('button').addEventListener('click', function(){
+                changeVar();
+                console.log(counter);
+            });
+
+            function changeVar() {
+                counter++;
+            }
+        }());
+    </script>
+</body>
+</html>

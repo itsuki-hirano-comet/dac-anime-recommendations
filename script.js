@@ -62,8 +62,9 @@
         
         
 
-        result.innerHTML += `<img src="images/img${answerString}.jpg" class="resultImg">`;
-        result.innerHTML += '<button id="reset">Give me another anime</button>';
+        // result.innerHTML += `<img src="images/img${answerString}.jpg" class="resultImg">`;
+        // result.innerHTML += '<button id="reset">Give me another anime</button>';
+        result.innerHTML += `<div class="side"><img src="images/img${answerString}.jpg" class="resultImg"> <button id="reset">Give me another anime</button></div>`
 
         setTimeout(function(){
             result.className = 'resultOn';

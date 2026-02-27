@@ -142,7 +142,7 @@ h3 {
 
 .resultImg {
     display: block;
-    width: 50%;
+    width: 60%;
     height: auto;
     border-radius: 10px;
     margin: auto;
@@ -202,14 +202,22 @@ h3 {
         gap: 15px;
     }
 
-    .resultImg {
-        width: 60%;
-        height: auto;
+    .resultOn {
+        display: flex;
+    }
+
+    .heading {
+        flex: 1;
+    }
+
+    .side {
+        flex: 2;
+        margin-top: 30px;
     }
 
     #reset {
-        font-size: 24px;
-        padding: 30px;
+        font-size: 20px;
+        padding: 20px;
         border-radius: 20px;
         max-width: 50%;    
     }
@@ -240,9 +248,17 @@ h3 {
         font-weight: 500;
     }
 
-    .resultImg {
-        width: 50%;
-        height: auto;
+    .resultOn {
+        display: flex;
+    }
+
+    .heading {
+        flex: 1;
+    }
+
+    .side {
+        flex: 2;
+        margin-top: 30px;
     }
 
     #start {
@@ -251,5 +267,12 @@ h3 {
         padding: 50px 20px;
         max-width: 300px;
         font-size: 36px;
+    }
+
+    #reset {
+        font-size: 20px;
+        padding: 20px;
+        border-radius: 20px;
+        max-width: 50%;    
     }
 }

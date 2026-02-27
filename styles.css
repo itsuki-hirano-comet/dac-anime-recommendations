@@ -82,7 +82,7 @@ section h2 {
     /* position: absolute; */
     /* top: 0; */
     /* height: 20vh ; */
-    height: 100px;
+    height: 80px;
     margin: 10px;
     background-color: lemonchiffon;
     position: relative;
@@ -98,6 +98,11 @@ section h2 {
     top: 50%;
     transform: translate(-50%, -50%);
     margin: 0;
+}
+
+.answer:hover, .answerFinal:hover, #start:hover, #reset:hover {
+    cursor: pointer;
+    background-color: paleturquoise;
 }
 
 .off, .resultOff {
@@ -128,20 +133,123 @@ section h2 {
 
 h3 {
     font-size: 26px;
+    color: gold;
 }
 
 .resultOff h2, .resultOn h2 {
     font-weight: 400;
 }
 
-.reset {
+.resultImg {
+    display: block;
+    width: 50%;
+    height: auto;
+    border-radius: 10px;
+    margin: auto;
+}
+
+#reset {
     background-color: palegoldenrod;
     color: darkblue;
-    border-color: midnightblue;
     position: sticky;
-    bottom: 10%;
-    border-width: 3px;
-    /* margin-top: 10px; */
+    bottom: 5%;
+    margin-top: 15px;
     border-radius: 10px;
     padding: 20px;
+    border: 3px solid midnightblue;
+}
+
+#start {
+    background-color: palegoldenrod;
+    color: darkblue;
+    border: 2px solid midnightblue;
+    border-radius: 10px;
+    padding: 20px;
+    width: 60%;
+    font-weight: 600;
+    font-size: 24px;
+}
+
+#initial h2 {
+    font-weight: 500;
+}
+
+/* tablet size */
+@media screen and (min-width: 600px) and (max-width: 899px) {
+    h1 {
+        font-size: 40px;
+    }
+
+    section h2 {
+        font-size: 28px;
+        margin-top: 50px;
+    }
+ 
+    h3 {
+        font-size: 36px;
+    }
+
+    #start {
+        margin-top: 20px;
+        width: 40%;
+        padding: 50px 20px;
+        max-width: 300px;
+    }
+
+    .options {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 15px;
+    }
+
+    .resultImg {
+        width: 60%;
+        height: auto;
+    }
+
+    #reset {
+        font-size: 24px;
+        padding: 30px;
+        border-radius: 20px;
+        max-width: 50%;    
+    }
+}
+
+@media screen and (min-width: 900px) {
+    h1 {
+        font-size:48px;
+    }
+
+    section h2 {
+        font-size: 28px;
+        margin-top: 50px;
+    }
+ 
+    h3 {
+        font-size: 36px;
+    }
+
+    .options {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 15px;
+    }
+
+    .options div p {
+        font-size: 22px;
+        font-weight: 500;
+    }
+
+    .resultImg {
+        width: 50%;
+        height: auto;
+    }
+
+    #start {
+        margin-top: 20px;
+        width: 40%;
+        padding: 50px 20px;
+        max-width: 300px;
+        font-size: 36px;
+    }
 }

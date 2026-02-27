@@ -5,9 +5,14 @@
     let counter = 0;
     let answerString = '';
     let nextQuestion = '';
+    const start = document.querySelector('#start');
+    const initialText = document.querySelector('#initial');
 
     window.addEventListener('load', function(){
-        changeDisplay("-1");
+        start.addEventListener('click', function() {
+            initialText.className = 'off';
+            changeDisplay("-1");
+        });  
     });
 
     function changeDisplay(questionID) {
@@ -55,15 +60,27 @@
     function showResult(answerString) {
         const result = document.querySelector(`#r${answerString}`);
         
-        result.className = 'resultOn';
+        
+
+        result.innerHTML += `<img src="images/img${answerString}.jpg" class="resultImg">`;
+        result.innerHTML += '<button id="reset">Give me another anime</button>';
 
         setTimeout(function(){
-            result.innerHTML += '<button class="reset">Give me another anime</button>';
+            result.className = 'resultOn';
 
-            document.querySelector('.reset').addEventListener('click', function(){
-            location.reload();
-        });
-        }, 1500);
+            document.querySelector('#reset').addEventListener('click', function(){
+                location.reload();
+            });
+        }, 500);
+
+        // this would show result once the image is loaded, which would be better than timeout, except internet might be bad at picnic day so who knows how long it would take to load an image.
+        // document.querySelector('.resultImg').addEventListener('load', function(){
+        //     result.className = 'resultOn';
+
+        //     document.querySelector('#reset').addEventListener('click', function(){
+        //         location.reload();
+        //     });
+        // })
         
         
     }

@@ -32,7 +32,7 @@
                 console.log(answerString);
                 // console.log(answerID)
                 if (answerClass === 'answerFinal') {  
-                    document.querySelector(`#r${answerString}`).className = 'resultOn';
+                    showResult(answerString);
                 } else {
                     questionSelector(answerID);  
                     // console.log(nextQuestion); 
@@ -50,5 +50,21 @@
         } else {
             nextQuestion = answerString;
         }
+    }
+
+    function showResult(answerString) {
+        const result = document.querySelector(`#r${answerString}`);
+        
+        result.className = 'resultOn';
+
+        setTimeout(function(){
+            result.innerHTML += '<button class="reset">Give me another anime</button>';
+
+            document.querySelector('.reset').addEventListener('click', function(){
+            location.reload();
+        });
+        }, 1500);
+        
+        
     }
 }());

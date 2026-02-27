@@ -6,144 +6,156 @@
 
     <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet">
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+
     <link href="styles.css" rel="stylesheet">
     <script src="script.js" defer></script>
 
-    <title>DAC Anime Recommendation</title>
+    <title>DAC Anime Akinator</title>
 </head>
 <body>
-    <h1>Anime Akinator</h1>
-    <p>Get your tailored anime recommendation!</p>
-    
-    <section class="off" id="q-1">
-        <h2>Do you want to watch a popular show or a niche show?</h2>
-        <div class="options">
-            <div class="answer" id="pop"><p>Popular</p></div>
-            <div class="answer" id="niche"><p>Niche</p></div>
-        </div>
-            
-    </section>
+    <header>
+        
+        <img src="images/logo.png" alt="DAC Logo" id="logo" width="563" height="448">
+        <h1>Anime Akinator</h1>
 
-    <section class="off" id="q-2">
-        <h2>Choose a genre</h2>
-        <div class="options">
-            <div class="answer" id="action"><p>Action</p></div>
-            <div class="answer" id="comedy"><p>Comedy</p></div>
-            <div class="answer" id="romance"><p>Romance</p></div>
-        </div>
-    </section>
+        
+        <!-- <p>Get your tailored anime recommendation!</p> -->
+    </header>
+        
+    <main>
+        <section class="off" id="q-1">
+            <h2>Do you want to watch a popular show or a niche show?</h2>
+            <div class="options">
+                <div class="answer" id="pop"><p>Popular</p></div>
+                <div class="answer" id="niche"><p>Niche</p></div>
+            </div>
+                
+        </section>
 
-    <section class="off" id="q-complete">
-        <h2>Do you care if the show is completed?</h2>
-        <div class="options">
-            <div class="answerFinal" id="completed"><p>Yes</p></div>
-            <div class="answerFinal" id="continued"><p>No</p></div>
-        </div>       
-    </section>
+        <section class="off" id="q-2">
+            <h2>Choose a genre</h2>
+            <div class="options">
+                <div class="answer" id="action"><p>Action</p></div>
+                <div class="answer" id="comedy"><p>Comedy</p></div>
+                <div class="answer" id="romance"><p>Romance</p></div>
+            </div>
+        </section>
 
-    <section class="off" id="q-pop-comedy">
-        <h2>Do you want a family friednly show?</h2>
-        <div class="options">
-            <div class="answerFinal" id="family"><p>Yes</p></div>
-            <div class="answerFinal" id="nsfw"><p>No</p></div>
-        </div>      
-    </section>
+        <section class="off" id="q-complete">
+            <h2>Do you care if the show is completed?</h2>
+            <div class="options">
+                <div class="answerFinal" id="completed"><p>Yes</p></div>
+                <div class="answerFinal" id="continued"><p>No</p></div>
+            </div>       
+        </section>
 
-    <section class="off" id="q-pop-romance">
-        <h2>Do you enjoy the process of a couple getting together, do you want the couple to start dating early?</h2>
-        <div class="options">
-            <div class="answerFinal" id="date-slow"><p>Enjoy the Process</p></div>
-            <div class="answerFinal" id="date-fast"><p>Start dating early</p></div>
-        </div>
-    </section>
+        <section class="off" id="q-pop-comedy">
+            <h2>Do you want a family friednly show?</h2>
+            <div class="options">
+                <div class="answerFinal" id="family"><p>Yes</p></div>
+                <div class="answerFinal" id="nsfw"><p>No</p></div>
+            </div>      
+        </section>
 
-    <section class="off" id="q-niche-comedy">    
-        <h2>Do you want a recent show or an older show?</h2>
-        <div class="options">
-            <div class="answerFinal" id="recent"><p>Recent</p></div>
-            <div class="answerFinal" id="old"><p>Older</p></div>
-        </div>   
-    </section>
+        <section class="off" id="q-pop-romance">
+            <h2>Do you enjoy the process of a couple getting together, or do you want the couple to start dating early?</h2>
+            <div class="options">
+                <div class="answerFinal" id="date-slow"><p>I enjoy the process</p></div>
+                <div class="answerFinal" id="date-fast"><p>Just date already</p></div>
+            </div>
+        </section>
 
-    <section class="off" id="q-niche-romance">    
-        <h2>Are you interested in Yuri / Girls Love?</h2>
-        <div class="options">
-            <div class="answerFinal" id="yuri"><p>Yes</p></div>
-            <div class="answer" id="hetero"><p>No</p></div>
-        </div>   
-    </section>
+        <section class="off" id="q-niche-comedy">    
+            <h2>Do you want a recent show or an older show?</h2>
+            <div class="options">
+                <div class="answerFinal" id="recent"><p>Recent</p></div>
+                <div class="answerFinal" id="old"><p>Older</p></div>
+            </div>   
+        </section>
 
-    <section class="off" id="q-niche-romance-hetero">    
-        <h2>Do you prefer single or multiple heroines?</h2>
-        <div class="options">
-            <div class="answerFinal" id="single"><p>Single</p></div>
-            <div class="answerFinal" id="harem"><p>Multiple</p></div>
-        </div>   
-    </section>
+        <section class="off" id="q-niche-romance">    
+            <h2>Are you interested in Yuri / Girls Love?</h2>
+            <div class="options">
+                <div class="answerFinal" id="yuri"><p>Yes</p></div>
+                <div class="answer" id="hetero"><p>No</p></div>
+            </div>   
+        </section>
 
-    <section class="resultOff" id="r-pop-action-completed">
-        <h2>Your Anime Recommendation is:</h2>
-        <h3>Fullmetal Alchemist Brotherhood</h3>
-    </section>
+        <section class="off" id="q-niche-romance-hetero">    
+            <h2>Do you prefer single or multiple heroines?</h2>
+            <div class="options">
+                <div class="answerFinal" id="single"><p>Single</p></div>
+                <div class="answerFinal" id="harem"><p>Multiple</p></div>
+            </div>   
+        </section>
 
-    <section class="resultOff" id="r-pop-action-continued">
-        <h2>Your Anime Recommendation is:</h2>
-        <h3>Demon Slayer</h3>
-    </section>
-    
-    <section class="resultOff" id="r-pop-comedy-family">
-        <h2>Your Anime Recommendation is:</h2>
-        <h3>Spy x Family</h3>
-    </section>
+        <section class="resultOff" id="r-pop-action-completed">
+            <h2>Your Anime Recommendation is:</h2>
+            <h3>Fullmetal Alchemist Brotherhood</h3>
+        </section>
 
-    <section class="resultOff" id="r-pop-comedy-nsfw">
-        <h2>Your Anime Recommendation is:</h2>
-        <h3>Konosuba</h3>
-    </section>
+        <section class="resultOff" id="r-pop-action-continued">
+            <h2>Your Anime Recommendation is:</h2>
+            <h3>Demon Slayer</h3>
+        </section>
+        
+        <section class="resultOff" id="r-pop-comedy-family">
+            <h2>Your Anime Recommendation is:</h2>
+            <h3>Spy x Family</h3>
+        </section>
 
-    <section class="resultOff" id="r-pop-romance-date-slow">
-        <h2>Your Anime Recommendation is:</h2>
-        <h3>Kaguya Sama: Love is War</h3>
-    </section>
+        <section class="resultOff" id="r-pop-comedy-nsfw">
+            <h2>Your Anime Recommendation is:</h2>
+            <h3>Konosuba</h3>
+        </section>
 
-    <section class="resultOff" id="r-pop-romance-date-fast">
-        <h2>Your Anime Recommendation is:</h2>
-        <h3>Horimiya</h3>
-    </section>
+        <section class="resultOff" id="r-pop-romance-date-slow">
+            <h2>Your Anime Recommendation is:</h2>
+            <h3>Kaguya Sama: Love is War</h3>
+        </section>
 
-    <section class="resultOff" id="r-niche-action-completed">
-        <h2>Your Anime Recommendation is:</h2>
-        <h3>Gurren Lagann</h3>
-    </section>
+        <section class="resultOff" id="r-pop-romance-date-fast">
+            <h2>Your Anime Recommendation is:</h2>
+            <h3>Horimiya</h3>
+        </section>
 
-    <section class="resultOff" id="r-niche-action-continued">
-        <h2>Your Anime Recommendation is:</h2>
-        <h3>86</h3>
-    </section>
+        <section class="resultOff" id="r-niche-action-completed">
+            <h2>Your Anime Recommendation is:</h2>
+            <h3>Gurren Lagann</h3>
+        </section>
 
-    <section class="resultOff" id="r-niche-comedy-recent">
-        <h2>Your Anime Recommendation is:</h2>
-        <h3>Dungeon Meshi</h3>
-    </section>
+        <section class="resultOff" id="r-niche-action-continued">
+            <h2>Your Anime Recommendation is:</h2>
+            <h3>86</h3>
+        </section>
 
-    <section class="resultOff" id="r-niche-comedy-old">
-        <h2>Your Anime Recommendation is:</h2>
-        <h3>Arakawa under the Bridge</h3>
-    </section>
+        <section class="resultOff" id="r-niche-comedy-recent">
+            <h2>Your Anime Recommendation is:</h2>
+            <h3>Dungeon Meshi</h3>
+        </section>
 
-    <section class="resultOff" id="r-niche-romance-yuri">
-        <h2>Your Anime Recommendation is:</h2>
-        <h3>Watanare</h3>
-    </section>
+        <section class="resultOff" id="r-niche-comedy-old">
+            <h2>Your Anime Recommendation is:</h2>
+            <h3>Arakawa under the Bridge</h3>
+        </section>
 
-    <section class="resultOff" id="r-niche-romance-hetero-single">
-        <h2>Your Anime Recommendation is:</h2>
-        <h3>The Angel Next Door Spoils Me Rotten</h3>
-    </section>
+        <section class="resultOff" id="r-niche-romance-yuri">
+            <h2>Your Anime Recommendation is:</h2>
+            <h3>Watanare</h3>
+        </section>
 
-    <section class="resultOff" id="r-niche-romance-hetero-harem">
-        <h2>Your Anime Recommendation is:</h2>
-        <h3>Makeine: Too Many Losing Heroines!</h3>
-    </section>
+        <section class="resultOff" id="r-niche-romance-hetero-single">
+            <h2>Your Anime Recommendation is:</h2>
+            <h3>The Angel Next Door Spoils Me Rotten</h3>
+        </section>
+
+        <section class="resultOff" id="r-niche-romance-hetero-harem">
+            <h2>Your Anime Recommendation is:</h2>
+            <h3>Makeine: Too Many Losing Heroines!</h3>
+        </section>
+    </main>
 </body>
 </html>

@@ -1,41 +1,98 @@
 body {
-    max-width: 1000px;
-    margin: auto;
     /* position: relative; */
+    background-color: midnightblue;
+    color: lightcyan;
+    width: 100%;
+    margin: auto;
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+    text-align: center;
+}
+
+header {
+    position: relative;
+    z-index: 2;
+    height: 20vh;
+    background-color: #add8e6;
+    /* width setting on header is unnecessary */
+    /* this width setting adds extra scrolling space horizontally... AND somehow vertically too which I absolutely do not understand why */
+    /* anyway, this width is to be omitted to avoid unnecessary scrolls */
+    /* width: 100%; */
+    text-align: center;
+    color: navy;
+    padding: 15px 5px;
+}
+
+#logo {
+    position: absolute;
+    height: 10vh;
+    width: auto;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+h1 {
+    position: absolute;
+    font-family: "Fredoka", sans-serif;
+    font-weight: 400;
+    width: 95%;
+    margin: 0;
+    bottom: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+main {
+    max-width: 1000px;
+    max-height: 80%;
+    margin: auto;
 }
 
 section {
     /* text-align: center; */
+    display: block;
+    position: relative;
+    /* top: 30vh; */
     max-width: 1000px;
-    width: 100%;
-    height: 80vh;
+    width: 90%;
+    /* height: 75vh; */
+    margin: auto;
 }
 
 section h2 {
     text-align: center;
+    margin: 30px 0;
+    padding: 0;
+    font-size: 20px;
 }
 
-.options {
+/* .options {
     display: flex;
-    
+    flex-direction: column;
+    height: 70%;
+    width: 100%;
     max-width: 1000px;
-    margin: auto;
-    top: 10%;
-    
-}
+    margin: auto;    
+} */
 
 .options div {
-    width: 50%;
-    flex: 1;
+    /* width: 50%; */
+    /* flex: 1; */
+    /* height: 100px; */
     /* position: absolute; */
     /* top: 0; */
-    height: 20vh ;
+    /* height: 20vh ; */
+    height: 100px;
     margin: 10px;
-    background-color: aquamarine;
+    background-color: lemonchiffon;
     position: relative;
+    border-radius: 20px;
 }
 
 .options div p {
+    /* text-align: center; */
+    color: darkslateblue;
+    font-size: 18px;
     position: absolute;
     left: 50%;
     top: 50%;
@@ -44,15 +101,47 @@ section h2 {
 }
 
 .off, .resultOff {
+    /* display: none; */
     position:absolute;
-    top: -100%;
+    top: -150%;
 }
 
-.on, .resultOn {
-    position: absolute;
+/* .on, .resultOn {
+    display: block;
+    position: relative;
     top: 20%;
-}
+} */
 
 .resultOn {
-    transition: all 1s ease;
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: top 1s ease;
+    z-index: 1;
+}
+
+.resultOff {
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+h3 {
+    font-size: 26px;
+}
+
+.resultOff h2, .resultOn h2 {
+    font-weight: 400;
+}
+
+.reset {
+    background-color: palegoldenrod;
+    color: darkblue;
+    border-color: midnightblue;
+    position: sticky;
+    bottom: 10%;
+    border-width: 3px;
+    /* margin-top: 10px; */
+    border-radius: 10px;
+    padding: 20px;
 }

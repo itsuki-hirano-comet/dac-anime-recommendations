@@ -28,160 +28,472 @@
             <button id="start">START</button>
         </section>
 
-        <section class="off" id="q-1">
+        <!-- common questions -->
+
+        <section class="off" id="q-popular">
             <h2>Do you want to watch a popular show or a niche show?</h2>
             <div class="options">
                 <div class="answer" id="pop"><p>Popular</p></div>
                 <div class="answer" id="niche"><p>Niche</p></div>
-            </div>
-                
+            </div>        
         </section>
 
-        <section class="off" id="q-2">
+        <section class="off" id="q-type">
+            <h2>What type of show would you like? A show that is...</h2>
+            <div class="options">
+                <div class="answer" id="type1"><p>Action packed</p></div>
+                <div class="answer" id="type2"><p>Full of drama</p></div>
+                <div class="answer" id="type3"><p>Fun or chill</p></div>
+            </div>        
+        </section>
+
+        
+
+        <section class="off" id="q-type1">
             <h2>Choose a genre</h2>
             <div class="options">
                 <div class="answer" id="action"><p>Action</p></div>
-                <div class="answer" id="comedy"><p>Comedy</p></div>
-                <div class="answer" id="romance"><p>Romance</p></div>
+                <div class="answer" id="fantasy"><p>Fantasy / Adventure</p></div>
+                <div class="answer" id="sciFi"><p>Science Fiction</p></div>
             </div>
         </section>
+
+        <section class="off" id="q-type2">
+            <h2>Choose a genre</h2>
+            <div class="options">
+                <div class="answer" id="romance"><p>Romance</p></div>
+                <div class="answer" id="horror"><p>Psychological / Horror</p></div>
+                <div class="answer" id="sports"><p>Sports</p></div>
+                <div class="answer" id="drama"><p>Drama</p></div>
+                <div class="answer" id="mystery"><p>Mystery / Thriller</p></div>
+                <div class="answer" id="music1"><p>Music</p></div>
+            </div>
+        </section>
+
+        <section class="off" id="q-type3">
+            <h2>Choose a genre</h2>
+            <div class="options">
+                <div class="answer" id="comedy"><p>Comedy</p></div>
+                <div class="answer" id="sliceOfLife"><p>Slice of Life</p></div>
+                <div class="answer" id="music2"><p>Music</p></div>
+            </div>
+        </section>
+        
 
         <section class="off" id="q-complete">
             <h2>Do you care if the show is completed?</h2>
             <div class="options">
-                <div class="answerFinal" id="completed"><p>Yes</p></div>
-                <div class="answerFinal" id="continued"><p>No</p></div>
+                <div class="answer" id="completed"><p>Yes</p></div>
+                <div class="answer" id="continued"><p>No</p></div>
             </div>       
         </section>
 
-        <section class="off" id="q-pop-comedy">
-            <h2>Do you want a family friednly show?</h2>
+        <section class="off" id="q-serious">
+            <h2>Which do you prefer? A show that is...</h2>
             <div class="options">
-                <div class="answerFinal" id="family"><p>Yes</p></div>
-                <div class="answerFinal" id="nsfw"><p>No</p></div>
-            </div>      
+                <div class="answer" id="serious"><p>Serious</p></div>
+                <div class="answer" id="comedic"><p>Comedic</p></div>
+            </div>       
         </section>
 
-        <section class="off" id="q-pop-romance">
-            <h2>Do you enjoy the process of a couple getting together, or do you want the couple to start dating early?</h2>
+        <section class="off" id="q-emotion">
+            <h2>Do you want to watch a show that gets emotional?</h2>
             <div class="options">
-                <div class="answerFinal" id="date-slow"><p>I enjoy the process</p></div>
-                <div class="answerFinal" id="date-fast"><p>Just date already</p></div>
-            </div>
+                <div class="answer" id="emotional"><p>Yes (make me cry)</p></div>
+                <div class="answer" id="notEmotional"><p>No</p></div>
+            </div>       
         </section>
 
-        <section class="off" id="q-niche-comedy">    
-            <h2>Do you want a recent show or an older show?</h2>
+        <section class="off" id="q-world">
+            <h2>Which do you prefer? A show that is set in...</h2>
             <div class="options">
-                <div class="answerFinal" id="recent"><p>Recent</p></div>
-                <div class="answerFinal" id="old"><p>Older</p></div>
-            </div>   
+                <div class="answer" id="realWorld"><p>The real world</p></div>
+                <div class="answer" id="fantasyWorld"><p>A fantasy world</p></div>
+            </div>       
         </section>
 
-        <section class="off" id="q-niche-romance">    
-            <h2>Are you interested in Yuri / Girls Love?</h2>
+        <section class="off" id="q-length">
+            <h2>Which do you prefer?</h2>
             <div class="options">
-                <div class="answerFinal" id="yuri"><p>Yes</p></div>
-                <div class="answer" id="hetero"><p>No</p></div>
-            </div>   
+                <div class="answer" id="long"><p>A long series to marathon</p></div>
+                <div class="answer" id="short"><p>A short series to binge</p></div>
+            </div>       
         </section>
 
-        <section class="off" id="q-niche-romance-hetero">    
-            <h2>Do you prefer single or multiple heroines?</h2>
+        <!-- action questions -->
+
+        <section class="off" id="q-plot">
+            <h2>Which do you care about more?</h2>
             <div class="options">
-                <div class="answerFinal" id="single"><p>Single</p></div>
-                <div class="answerFinal" id="harem"><p>Multiple</p></div>
-            </div>   
+                <div class="answer" id="animation"><p>Action scenes</p></div>
+                <div class="answer" id="plot"><p>Intersting plot</p></div>
+            </div>       
         </section>
 
-        <section class="resultOff" id="r-pop-action-completed">
+        
+
+        <section class="off" id="q-mc">
+            <h2>What kind of growth do you want to see from the MC?</h2>
+            <div class="options">
+                <div class="answer" id="growPower"><p>Physical growth and power ups</p></div>
+                <div class="answer" id="growMature"><p>Emotional growth</p></div>
+            </div>       
+        </section>
+
+        <section class="off" id="q-fantasy">
+            <h2>What type of show would you like?</h2>
+            <div class="options">
+                <div class="answer" id="isekai"><p>Isekai</p></div>
+                <div class="answer" id="adventure"><p>Adventure</p></div>
+            </div>       
+        </section>
+
+        <section class="off" id="q-isekaiType">
+            <h2>What type of show would you like?</h2>
+            <div class="options">
+                <div class="answer" id="standard"><p>Standard Isekai</p></div>
+                <div class="answer" id="reverse"><p>Reverse Isekai</p></div>
+            </div>       
+        </section>
+
+        <section class="off" id="q-adventure">
+            <h2>Which do you prefer? A show that...</h2>
+            <div class="options">
+                <div class="answer" id="adventureAction"><p>is full of action</p></div>
+                <div class="answer" id="adventureSlow"><p>slowly explores the world</p></div>
+            </div>       
+        </section>
+
+        <section class="off" id="q-isekaiMC">
+            <h2>Which do you prefer? An MC who...</h2>
+            <div class="options">
+                <div class="answerFinal" id="overlord"><p>is overpowered</p></div>
+                <div class="answerFinal" id="reZero"><p>struggles a lot</p></div>
+            </div>       
+        </section>
+
+        <section class="off" id="q-type1-action-niche-completed-comedic-plot">
+            <h2>Which do you prefer? A show that is...</h2>
+            <div class="options">
+                <div class="answerFinal" id="killLaKill"><p>Hype</p></div>
+                <div class="answerFinal" id="bbb"><p>Mysterious</p></div>
+            </div>       
+        </section>
+
+        <section class="off" id="q-type1-action-niche-continued-comedic">
+            <h2>What type of show would you like?</h2>
+            <div class="options">
+                <div class="answerFinal" id="nigewaka"><p>Historical fiction</p></div>
+                <div class="answerFinal" id="lycoris"><p>Gun action</p></div>
+                <div class="answerFinal" id="noragami"><p>Supernatural</p></div>
+            </div>       
+        </section>
+
+        <section class="off" id="q-type1-action-niche-continued-serious">
+            <h2>What type of show would you like?</h2>
+            <div class="options">
+                <div class="answerFinal" id="tbhx"><p>Superhero</p></div>
+                <div class="answerFinal" id="windBreaker"><p>Martial Arts</p></div>
+            </div>       
+        </section>
+
+        <section class="off" id="q-type1-action-pop-continued-serious-animation">
+            <h2>What type of show would you like?</h2>
+            <div class="options">
+                <div class="answerFinal" id="demonSlayer"><p>Sword action</p></div>
+                <div class="answerFinal" id="jjk"><p>Supernatural battles</p></div>
+            </div>       
+        </section>
+
+        <section class="off" id="q-type1-action-pop-continued-comedic">
+            <h2>What type of show would you like?</h2>
+            <div class="options">
+                <div class="answerFinal" id="onePunch"><p>Superhero</p></div>
+                <div class="answerFinal" id="dandadan"><p>Supernatural battles</p></div>
+            </div>       
+        </section>
+
+        <!-- SciFi questions -->
+        <section class="off" id="q-sciFi">
+            <h2>What type of show would you like?</h2>
+            <div class="options">
+                <div class="answer" id="mecha"><p>Mecha action</p></div>
+                <div class="answer" id="cyberpunk"><p>Cyberpunk / dystopian</p></div>
+            </div>       
+        </section>
+        
+        <section class="off" id="q-type1-sciFi-cyberpunk">
+            <h2>Which do you prefer? A show with...</h2>
+            <div class="options">
+                <div class="answer" id="cyberAction"><p>Tons of action scenes</p></div>
+                <div class="answer" id="cyberMusic"><p>Great music</p></div>
+            </div>       
+        </section>
+
+        <section class="off" id="q-type1-sciFi-mecha">
+            <h2>Which do you prefer? A show with...</h2>
+            <div class="options">
+                <div class="answer" id="mechaHype"><p>Hype and aura</p></div>
+                <div class="answer" id="mechaPlot"><p>Complex plots</p></div>
+            </div>       
+        </section>
+
+        <section class="off" id="q-type1-sciFi-mecha-mechaHype">
+            <h2>Which type of show do you prefer?</h2>
+            <div class="options">
+                <div class="answerFinal" id="gridman"><p>Kaiju action</p></div>
+                <div class="answerFinal" id="gurrenLagann"><p>Space adventure</p></div>
+            </div>       
+        </section>
+
+        <section class="off" id="q-type1-sciFi-mecha-mechaPlot">
+            <h2>Which setting interests you more?</h2>
+            <div class="options">
+                <div class="answerFinal" id="86"><p>Dystopian warfare</p></div>
+                <div class="answerFinal" id="vivy"><p>Space academy</p></div>
+            </div>       
+        </section>
+
+        <section class="off" id="q-type1-sciFi-cyberpunk-cyberMusic">
+            <h2>Which setting interests you more?</h2>
+            <div class="options">
+                <div class="answerFinal" id="guiltyCrown"><p>Post-apocalyptic world</p></div>
+                <div class="answerFinal" id="vivy"><p>Android revolution</p></div>
+            </div>       
+        </section>
+
+        <section class="off" id="q-type1-sciFi-cyberpunk-cyberAction">
+            <h2>Which type of show do you prefer?</h2>
+            <div class="options">
+                <div class="answerFinal" id="psychoPass"><p>A psychological thriller</p></div>
+                <div class="answerFinal" id="akudama"><p>Cyberpunk action</p></div>
+            </div>       
+        </section>
+
+        <!-- romance questions -->
+        
+        <section class="off" id="q-romance">
+            <h2>What type of romance would you like?</h2>
+            <div class="options">
+                <div class="answer" id="normal"><p>Straight / NL</p></div>
+                <div class="answer" id="yuri"><p>Yuri / GL</p></div>
+                <div class="answer" id="yaoi"><p>Yaoi / BL</p></div>
+            </div>       
+        </section>
+
+        <section class="off" id="q-romSpeed">
+            <h2>Which do you enjoy watching?</h2>
+            <div class="options">
+                <div class="answer" id="romSlow"><p>A couple slowly getting together</p></div>
+                <div class="answer" id="romFast"><p>The relationship of an already formed couple</p></div>
+            </div>       
+        </section>
+
+        <section class="off" id="q-harem">
+            <h2>Which do you prefer? A show with...</h2>
+            <div class="options">
+                <div class="answer" id="notHarem"><p>a single love interest</p></div>
+                <div class="answer" id="harem"><p>multiple love interests / harem</p></div>
+            </div>       
+        </section>
+
+        <section class="off" id="q-couples">
+            <h2>Which do you prefer? A show that...</h2>
+            <div class="options">
+                <div class="answer" id="single"><p>focuses on a single couple</p></div>
+                <div class="answer" id="multiple"><p>introduces multiple couples</p></div>
+            </div>       
+        </section>
+
+        <section class="off" id="q-romGenre">
+            <h2>Do you want a show that is fused with other genre?</h2>
+            <div class="options">
+                <div class="answer" id="pureRom"><p>No, give me pure romance</p></div>
+                <div class="answer" id="fuseRom"><p>yes!</p></div>
+            </div>       
+        </section>
+
+        <section class="off" id="q-ageGap">
+            <h2>Do you like a romance with age gap?</h2>
+            <div class="options">
+                <div class="answer" id="ageGap"><p>Yes</p></div>
+                <div class="answer" id="noAgeGap"><p>No</p></div>
+            </div>       
+        </section>
+
+        <section class="off" id="q-type2-romance-yuri-fuseRom">
+            <h2>Which genre do you prefer?</h2>
+            <div class="options">
+                <div class="answerFinal" id="yuruYuri"><p>Comedy</p></div>
+                <div class="answerFinal" id="magiRev"><p>Fantasy</p></div>
+            </div>       
+        </section>
+
+        <section class="off" id="q-type2-romance-yaoi-fuseRom">
+            <h2>Which genre do you prefer?</h2>
+            <div class="options">
+                <div class="answerFinal" id="yuriOnIce"><p>Sports</p></div>
+                <div class="answerFinal" id="bananaFish"><p>Thriller</p></div>
+            </div>       
+        </section>
+
+        <!-- horror questions -->
+        <section class="off" id="q-horror">
+            <h2>Which do you prefer?</h2>
+            <div class="options">
+                <div class="answer" id="scare"><p>Horror (scare me)</p></div>
+                <div class="answer" id="psycho"><p>Psychological (drive me crazy)</p></div>
+            </div>       
+        </section>
+
+        <section class="off" id="q-type2-horror-scare">
+            <h2>Which do you prefer? A show with...</h2>
+            <div class="options">
+                <div class="answerFinal" id="summerHikaruDied"><p>some mystery elements</p></div>
+                <div class="answer" id="horrorAction"><p>some action</p></div>
+            </div>       
+        </section>
+
+        <section class="off" id="q-type2-horror-scare-horrorAction">
+            <h2>Which interests you more? A show about...</h2>
+            <div class="options">
+                <div class="answerFinal" id="darkGathering"><p>Ghost hunting</p></div>
+                <div class="answerFinal" id="summertimeRender"><p>Deadly doppelgangers</p></div>
+            </div>       
+        </section>
+
+        <section class="off" id="q-type2-horror-psycho">
+            <h2>Which do you prefer? A show with...</h2>
+            <div class="options">
+                <div class="answerFinal" id="parasyte"><p>Mature design / settings</p></div>
+                <div class="answer" id="cute"><p>Cute characters</p></div>
+            </div>       
+        </section>
+
+        <section class="off" id="q-type2-horror-psycho-cute">
+            <h2>Which setting do you prefer?</h2>
+            <div class="options">
+                <div class="answerFinal" id="schoolLive"><p>Post-apocalypse</p></div>
+                <div class="answer" id="psychoFantasy"><p>Fantasy</p></div>
+            </div>       
+        </section>
+
+        <section class="off" id="q-type2-horror-psycho-cute-psychoFantasy">
+            <h2>Which do you prefer? A show about...</h2>
+            <div class="options">
+                <div class="answerFinal" id="madoka"><p>Magical girls</p></div>
+                <div class="answerFinal" id="madeInAbyss"><p>Exploring the unknown</p></div>
+            </div>       
+        </section>
+
+        <!-- sports questions -->
+        <section class="off" id="q-type2-sports-pop">
+            <h2>Which do you prefer?</h2>
+            <div class="options">
+                <div class="answer" id="team"><p>Team Sports</p></div>
+                <div class="answer" id="individual"><p>Individual Sports</p></div>
+            </div>       
+        </section>
+
+        <section class="off" id="q-type2-sports-pop-team">
+            <h2>Which are you intersted in?</h2>
+            <div class="options">
+                <div class="answerFinal" id="blueLock"><p>Soccer</p></div>
+                <div class="answerFinal" id="kuroko"><p>Basketball</p></div>
+                <div class="answerFinal" id="haikyuu"><p>Haikyuu</p></div>
+            </div>       
+        </section>
+
+        <section class="off" id="q-type2-sports-pop-individual">
+            <h2>Which are you intersted in?</h2>
+            <div class="options">
+                <div class="answerFinal" id="uma"><p>Racing</p></div>
+                <div class="answerFinal" id="megaloBox"><p>Boxing</p></div>
+            </div>       
+        </section>
+
+        <section class="off" id="q-type2-sports-niche">
+            <h2>Which are you intersted in?</h2>
+            <div class="options">
+                <div class="answerFinal" id="free"><p>Swimming</p></div>
+                <div class="answerFinal" id="pingPong"><p>Ping Pong</p></div>
+                <div class="answerFinal" id="medalist"><p>Figure Skating</p></div>
+                <div class="answerFinal" id="tsurune"><p>Archery</p></div>
+            </div>       
+        </section>
+        
+        <!-- drama questions -->
+        <section class="off" id="q-type2-drama-notEmotional-fantasyWorld">
+            <h2>Which are you intersted in? A show about...</h2>
+            <div class="options">
+                <div class="answerFinal" id="lustrous"><p>A post-apocalyptic world</p></div>
+                <div class="answerFinal" id="mushishi"><p>Supernatural beings</p></div>
+            </div>       
+        </section>
+
+        <section class="off" id="q-type2-drama-notEmotional-realWorld">
+            <h2>Which are you intersted in? A show that is...</h2>
+            <div class="options">
+                <div class="answer" id="dramaFast"><p>Fast and full of drama</p></div>
+                <div class="answer" id="dramaSlow"><p>Slow but touching</p></div>
+            </div>       
+        </section>
+
+        <section class="off" id="q-type2-drama-notEmotional-realWorld-dramaFast">
+            <h2>Which are you intersted in? A show about...</h2>
+            <div class="options">
+                <div class="answerFinal" id="jelly"><p>Music creators</p></div>
+                <div class="answerFinal" id="oshi"><p>Idols and actors</p></div>
+            </div>       
+        </section>
+
+        <!-- mystery questions -->
+        <section class="off" id="q-type2-mystery">
+            <h2>Which do you prefer? A show with...</h2>
+            <div class="options">
+                <div class="answer" id="mysteryFantasy"><p>Supernatural / fantasy setting</p></div>
+                <div class="answer" id="mysteryReal"><p>Real world / historical setting</p></div>
+            </div>       
+        </section>
+
+        <section class="off" id="q-type2-mystery-mysteryReal-niche">
+            <h2>Which interess you more?</h2>
+            <div class="options">
+                <div class="answerFinal" id="orb"><p>A historical thriller</p></div>
+                <div class="answerFinal" id="oddTaxi"><p>A murder mystery</p></div>
+            </div>       
+        </section>
+
+        <section class="off" id="q-type2-mystery-mysteryFantasy-niche-long">
+            <h2>Which interess you more?</h2>
+            <div class="options">
+                <div class="answerFinal" id="durarara"><p>Urban legends and chaotic plot</p></div>
+                <div class="answerFinal" id="monogatari"><p>Supernatural mystery and witty dialogues</p></div>
+            </div>       
+        </section>
+
+        <section class="off" id="q-type2-mystery-mysteryFantasy-pop-short">
+            <h2>Which interess you more?</h2>
+            <div class="options">
+                <div class="answerFinal" id="steinsGate"><p>Time travelling mystery</p></div>
+                <div class="answerFinal" id="promised"><p>Suspenseful escape from monsters</p></div>
+            </div>       
+        </section>
+
+        <section class="off" id="q-mysteryType">
+            <h2>Which do you prefer? A show with...</h2>
+            <div class="options">
+                <div class="answer" id="mysteryPlot"><p>Thrilling plot</p></div>
+                <div class="answer" id="mysteryAction"><p>Some mix of action and mystery</p></div>
+            </div>       
+        </section>
+
+        <!-- result -->
+
+        <section class="resultOff" id="result">
             <div class="heading">
                 <h2>Your Anime Recommendation is:</h2>
                 <h3>Fullmetal Alchemist Brotherhood</h3>
-            </div>
-        </section>
-
-        <section class="resultOff" id="r-pop-action-continued">
-            <div class="heading">
-                <h2>Your Anime Recommendation is:</h2>
-                <h3>Demon Slayer</h3>
-            </div>
-        </section>
-        
-        <section class="resultOff" id="r-pop-comedy-family">
-            <div class="heading">
-                <h2>Your Anime Recommendation is:</h2>
-                <h3>Spy x Family</h3>
-            </div>     
-        </section>
-
-        <section class="resultOff" id="r-pop-comedy-nsfw">
-            <div class="heading">
-                <h2>Your Anime Recommendation is:</h2>
-                <h3>Konosuba</h3>
-            </div>        
-        </section>
-
-        <section class="resultOff" id="r-pop-romance-date-slow">
-            <div class="heading">
-                <h2>Your Anime Recommendation is:</h2>
-                <h3>Kaguya Sama: Love is War</h3>
-            </div>
-        </section>
-
-        <section class="resultOff" id="r-pop-romance-date-fast">
-            <div class="heading">
-                <h2>Your Anime Recommendation is:</h2>
-                <h3>Horimiya</h3>
-            </div>
-        </section>
-
-        <section class="resultOff" id="r-niche-action-completed">
-            <div class="heading">
-                <h2>Your Anime Recommendation is:</h2>
-                <h3>Gurren Lagann</h3>
-            </div>
-        </section>
-
-        <section class="resultOff" id="r-niche-action-continued">
-            <div class="heading">
-                <h2>Your Anime Recommendation is:</h2>
-                <h3>86</h3>
-            </div>
-        </section>
-
-        <section class="resultOff" id="r-niche-comedy-recent">
-            <div class="heading">
-                <h2>Your Anime Recommendation is:</h2>
-                <h3>Delicious in Dungeon</h3>
-            </div>
-        </section>
-
-        <section class="resultOff" id="r-niche-comedy-old">
-            <div class="heading">
-                <h2>Your Anime Recommendation is:</h2>
-                <h3>Arakawa under the Bridge</h3>
-            </div>
-        </section>
-
-        <section class="resultOff" id="r-niche-romance-yuri">
-            <div class="heading">
-                <h2>Your Anime Recommendation is:</h2>
-                <h3>Watanare:<br>There's No Freaking Way I'll be Your Lover! Unless...</h3>
-            </div>
-        </section>
-
-        <section class="resultOff" id="r-niche-romance-hetero-single">
-            <div class="heading">
-                <h2>Your Anime Recommendation is:</h2>
-                <h3>The Angel Next Door Spoils Me Rotten</h3>
-            </div>
-        </section>
-
-        <section class="resultOff" id="r-niche-romance-hetero-harem">
-            <div class="heading">
-                <h2>Your Anime Recommendation is:</h2>
-                <h3>Makeine: Too Many Losing Heroines!</h3>
             </div>
         </section>
     </main>

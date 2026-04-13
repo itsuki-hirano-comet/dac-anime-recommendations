@@ -10,7 +10,7 @@
     const initialText = document.querySelector('#initial');
     let resultID;
     let resultTitle;
-    let resultImage;
+    // let resultImage;
 
     const titles = {
         aot: 'Attack on Titan',
@@ -19,7 +19,65 @@
         mob: 'Mob Psycho 100',
         fate: 'Fate/Stay Night: Unlimited Blade Works',
         fire: 'Fire Force',
-        killLaKill: 'Kill la Kill'
+        killLaKill: 'Kill la Kill',
+        bbb: 'Blood Blockade Battlefront',
+        nigewaka: 'The Elusive Samurai',
+        lycoris: 'Lycoris Recoil',
+        noragami: 'Noragami',
+        tbhx: 'To Be Hero X',
+        windBreaker: 'Wind Breaker',
+        csm: 'Chainsaw Man',
+        demonSlayer: 'Demon Slayer',
+        jjk: 'Jujutsu Kaisen',
+        onePunch: 'One Punch Man',
+        dandadan: "Dandadan",
+        hxh: 'Hunter x Hunter',
+        jigokuraku: "Hell's Paradise",
+        tabitabi: 'Wandering Witch',
+        op: 'One Piece',
+        jojo: "JoJo's Bizarre Adventure",
+        frieren: "Frieren: Beyond Journey's End",
+        mushoku: "Mushoku Tensei",
+        reCreators: 'Re:Creators',
+        partTimer: 'The Devil is a Part-Timer!',
+        log: 'Log Horizon',
+        slime: 'That Time I Got Reincarnated as a Slime',
+        overlord: 'Overlord',
+        reZero: 'Re: Zero - Starting Life in Another World',
+        gridman: 'SSSS.Gridman',
+        gurrenLagann: "Gurren Lagann",
+        86: '86',
+        vivy: "Vivy: Fluorite Eye's Song",
+        guiltyCrown: 'Guilty Crown',
+        mercury: "Mobile Suit Gundam: The Witch from Mercury",
+        psychoPass: "Psycho-Pass",
+        akudama: "Akudama Drive",
+        horimiya: "Horimiya",
+        bunny: "Rascal Does Not Dream of Bunny Girl Senpai",
+        nisekoi: "Nisekoi",
+        chuni: "Love, Chunibyo & Other Delusions!",
+        kaguya: "Kaguya-sama: Love Is War",
+        april: "Your Lie in April",
+        oregairu: "My Teen Romantic Comedy SNAFU",
+        plastic: "Plastic Memories",
+        toradora: "Toradora!",
+        fruits: "Fruits Basket",
+        makeine: "Makeine: Too Many Losing Heroines!",
+        yamada: "My Love Story with Yamada-kun at Lv999",
+        fragrant: "The Fragrant Flower Blooms with Dignity",
+        hundred: "The 100 Girlfriends Who Really, Really, Really, Really, Really Love You",
+        tonikawa: "Tonikawa: Over the Moon For You",
+        wotakoi: "Wotakoi: Love Is Hard for Otaku",
+        yuruYuri: "YuruYuri",
+        magiRev: "The Magical Revolution of the Reincarnated Princess and the Genius Young Lady",
+        yuriOnIce: "Yuri on Ice",
+        bananaFish: "Banana Fish",
+        watanare: "There's No Freaking Way I'll be Your Lover! Unless...",
+        adaShima: "Adachi and Shimamura",
+        bloom: "Bloom Into You",
+        watatabe: "This Monster Wants to Eat Me",
+        sasaki: "Sasaki and Miyano",
+        given: "Given"
     }
 
     window.addEventListener('load', function(){
@@ -92,7 +150,7 @@
             switch(answers[1]) {
                 case 'action': questionAction(); break;
                 case 'fantasy': questionFantasy(); break;
-                case 'sciFi': questionFantasy(); break;
+                case 'sciFi': questionSciFi(); break;
                 case 'romance': questionRomance(); break;
                 case 'horror': questionsHorror(); break;
                 case 'sports': questionSports(); break;
@@ -101,7 +159,7 @@
                 case 'music1': questionMusic1(); break;
                 case 'comedy': questionComedy(); break;
                 case 'sliceOfLife': questionSlice(); break;
-                case 'music2': questionsMusic2();
+                case 'music2': questionsMusic2(); break;
             }
         }
     }
@@ -254,9 +312,16 @@
             } else if (counter === 4) {
                 nextQuestion = '-complete';
             } else if (counter === 5) {
-                nextQuestion = '-harem';
+                if (answers[3] === 'pop' && answers[4] === 'completed') {
+                    nextQuestion = '-emotion';
+                } else {
+                    nextQuestion = '-harem';
+                }
+                
             } else if (counter < 8) {
-                if (answers[4] === 'completed' && answers[5] === 'notHarem') {
+                if (answers[3] === 'pop' && answers[4] === 'completed' && counter === 6) {
+                    next = false;
+                } else if (answers[4] === 'completed' && answers[5] === 'notHarem') {
                     if (counter === 6) {
                         nextQuestion = '-emotion';
                     } else {
@@ -368,7 +433,9 @@
                 next = false;
             }else if (counter === 5 && answers[2] === 'niche' && answers[3] === 'completed' && answers[4] === 'serious') {
                 next = false;
-            } else if (counter === 6 && answers[2] === 'niche' && answers[3] === 'completed' && answers[4] === 'comedic' && answers[5] === 'animation') {
+            } else if (counter === 6 && answers[2] === 'niche' && answers[3] === 'completed' && answers[4] === 'serious' && answers[5] === 'animation') {
+                next = false;
+            } else if( counter === 6 && answerString === '-type1-action-pop-continued-serious-plot') {
                 next = false;
             } else {
                 nextQuestion = answerString;
@@ -385,10 +452,10 @@
         resultSelection(answer);
 
         // console.log(`titles.${resultID}`);
-        // resultTitle = titles.resultID;
+        resultTitle = titles[resultID];
         // resultImage = images.resultID;
         console.log(resultTitle);
-        console.log(resultImage);
+        // console.log(resultImage);
 
         // result.innerHTML += `<img src="images/img${answerString}.jpg" class="resultImg">`;
         // result.innerHTML += '<button id="reset">Give me another anime</button>';
@@ -397,7 +464,7 @@
         titleDisplay.innerHTML = `${resultTitle}`;
 
 
-        result.innerHTML += `<div class="side"><img src="images/${resultImage}.jpg" class="resultImg"> <button id="reset">Give me another anime</button></div>`
+        result.innerHTML += `<div class="side"><img src="images/${resultID}.jpg" class="resultImg"> <button id="reset">Give me another anime</button></div>`
 
         setTimeout(function(){
             result.className = 'resultOn';
@@ -420,31 +487,136 @@
     function resultSelection(answer) {
         switch (answer) {
             case '-type1-action-pop-completed-serious-growPower':
-                resultTitle = titles.aot;
-                resultImage = 'aot';
+                resultID = 'aot';
+
+                // resultTitle = titles.aot;
+                // resultImage = 'aot';
                 break;
             case '-type1-action-pop-completed-serious-growMature':
-                resultTitle = titles.fmab;
-                resultImage = 'fmab';
+                // resultTitle = titles.fmab;
+                // resultImage = 'fmab';
+                resultID = 'fmab';
                 break;
             case '-type1-action-pop-completed-comedic-growPower':
-                resultTitle = titles.mha;
-                resultImage = 'mha';
+                // resultTitle = titles.mha;
+                resultID = 'mha';
                 break;
             case '-type1-action-pop-completed-comedic-growMature': 
-                resultTitle = titles.mob;
-                resultImage = 'mob';
+                // resultTitle = titles.mob;
+                resultID = 'mob';
                 break;
             case '-type1-action-niche-completed-serious':
-                resultTitle = titles.fate;
-                resultImage = 'fate';
+                // resultTitle = titles.fate;
+                resultID = 'fate';
                 break;
             case '-type1-action-niche-completed-comedic-animation':
-                resultTitle = titles.fire;
-                resultImage = 'fire';
+                // resultTitle = titles.fire;
+                resultID = 'fire';
+                break;
+            case '-type1-action-pop-continued-serious-plot':
+                resultID = 'csm';
+                break;
+            case '-type1-fantasy-adventure-niche-adventureAction-completed':
+                resultID = 'hxh';
+                break;
+            case '-type1-fantasy-adventure-niche-adventureAction-continued':
+                resultID = 'jigokuraku';
+                break;
+            case '-type1-fantasy-adventure-niche-adventureSlow':
+                resultID = 'tabitabi';
+                break;
+            case '-type1-fantasy-adventure-pop-adventureAction-comedic':
+                resultID = 'op';
+                break;
+            case '-type1-fantasy-adventure-pop-adventureAction-serious':
+                resultID = 'jojo';
+                break;
+            case '-type1-fantasy-adventure-pop-adventureSlow':
+                resultID = 'frieren';
+                break;
+            case '-type1-fantasy-isekai-niche-serious-standard':
+                resultID = 'mushoku';
+                break;
+            case '-type1-fantasy-isekai-niche-serious-reverse':
+                resultID = 'reCreators';
+                break;
+            case '-type1-fantasy-isekai-niche-comedic-reverse':
+                resultID = 'partTimer';
+                break;
+            case '-type1-fantasy-isekai-niche-comedic-standard':
+                resultID = 'log';
+                break;
+            case '-type1-fantasy-isekai-pop-comedic':
+                resultID = 'slime';
+                break;
+            case '-type2-romance-normal-pop-continued-notHarem-romFast':
+                resultID = 'horimiya';
+                break;
+            case '-type2-romance-normal-pop-continued-harem-romFast':
+                resultID = 'bunny';
+                break;
+            case '-type2-romance-normal-pop-continued-harem-romSlow':
+                resultID = 'nisekoi';
+                break;
+            case '-type2-romance-normal-pop-continued-notHarem-romSlow-single':
+                resultID = 'chuni';
+                break;
+            case '-type2-romance-normal-pop-continued-notHarem-romSlow-multiple':
+                resultID = 'kaguya';
+                break;
+            case '-type2-romance-normal-pop-completed-emotional':
+                resultID = 'april';
+                break;
+            case '-type2-romance-normal-pop-completed-notEmotional':
+                resultID = 'oregairu';
+                break;
+            case '-type2-romance-normal-niche-completed-notHarem-emotional':
+                resultID = 'plastic';
+                break;
+            case '-type2-romance-normal-niche-completed-notHarem-notEmotional':
+                resultID = 'toradora';
+                break;
+            case '-type2-romance-normal-niche-completed-harem':
+                resultID = 'fruits';
+                break;
+            case '-type2-romance-normal-niche-continued-harem-romSlow':
+                resultID = 'makeine';
+                break;
+            case '-type2-romance-normal-niche-continued-notHarem-romSlow-ageGap':
+                resultID = 'yamada';
+                break;
+            case '-type2-romance-normal-niche-continued-notHarem-romSlow-noAgeGap':
+                resultID = 'fragrant';
+                break;
+            case '-type2-romance-normal-niche-continued-harem-romFast':
+                resultID = 'hundred';
+                break;
+            case '-type2-romance-normal-niche-continued-notHarem-romFast-single':
+                resultID = 'tonikawa';
+                break;
+            case '-type2-romance-normal-niche-continued-notHarem-romFast-multiple':
+                resultID = 'wotakoi';
+                break;
+            case '-type2-romance-yuri-pureRom-comedic-harem':
+                resultID = 'watanare';
+                break;
+            case '-type2-romance-yuri-pureRom-comedic-notHarem':
+                resultID = 'adaShima';
+                break;
+            case '-type2-romance-yuri-pureRom-serious-notHarem':
+                resultID = 'bloom';
+                break;
+            case '-type2-romance-yuri-pureRom-serious-harem':
+                resultID = 'watatabe';
+                break;
+            case '-type2-romance-yaoi-pureRom-ageGap':
+                resultID = 'sasaki';
+                break;
+            case '-type2-romance-yaoi-pureRom-noAgeGap':
+                resultID = 'given';
+                break;
             default:
-                resultTitle = titles.answer;
-                resultImage = answer;
+                resultID = answer;
         }
     }
 }());

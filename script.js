@@ -12,6 +12,8 @@
     let resultTitle;
     // let resultImage;
 
+    console.log('new files added');
+
     const titles = {
         aot: 'Attack on Titan',
         fmab: 'Fullmetal Alchemist Brotherhood',

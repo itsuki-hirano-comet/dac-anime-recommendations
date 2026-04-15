@@ -23,6 +23,30 @@ header {
     padding: 15px 5px;
 }
 
+.resetOn {
+    /* position: absolute; */
+    /* bottom: 20px;
+    right: 40px; */
+    width: 50px;
+    font-size: 30px;
+    background-color: lightblue;
+    padding: 20px 40px;
+    border-radius: 5px;
+    color: rgb(65, 65, 65);
+    cursor: pointer;
+    margin-top: 30px;
+} 
+
+.resetOn:hover {
+    background-color: aqua;
+    color: rgb(28, 28, 71);
+}
+
+.resetOn:hover .fa-arrow-rotate-left {
+    transform: scale(1.2);
+    transition: transform 0.2s ease-in-out;
+}
+
 #logo {
     position: absolute;
     height: 10vh;
@@ -44,8 +68,11 @@ h1 {
 
 main {
     max-width: 1000px;
-    max-height: 80%;
+    height: 80%;
     margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 section {

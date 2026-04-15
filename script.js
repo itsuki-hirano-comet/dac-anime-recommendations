@@ -10,6 +10,7 @@
     const initialText = document.querySelector('#initial');
     let resultID;
     let resultTitle;
+    const resetBtn = document.querySelector('#resetButton');
     // let resultImage;
 
     console.log('new files added');
@@ -79,15 +80,78 @@
         bloom: "Bloom Into You",
         watatabe: "This Monster Wants to Eat Me",
         sasaki: "Sasaki and Miyano",
-        given: "Given"
+        given: "Given",
+        hikaru: 'The Summer Hikaru Died',
+        darkGathering: "Dark Gathering",
+        render: "Summer Time Rendering",
+        parasyte: "Parasyte: The Maxim",
+        schoolLive: "School-Live!",
+        madoka: "Puella Magi Madoka Magica",
+        abyss: "Made in Abyss",
+        bluelock: "Blue Lock",
+        kuroko: "Kuroko's Basketball",
+        haikyu: "Haikyu!!",
+        uma: "Uma Musume: Cinderella Gray",
+        megalo: "Megalo Box",
+        free: "Free!",
+        pong: "Ping Pong the Animation",
+        medalist: "Medalist",
+        tsurune: "Tsurune",
+        universe: "A Place Further than the Universe",
+        violet: "Violet Evergarden",
+        journal: "Journal with Witch",
+        march: "March Comes In like a Lion",
+        jelly: "Jellyfish Can't Swim in the Night",
+        oshi: "Oshi no Ko",
+        lustrous: "Land of the Lustrous",
+        mushishi: "Mushishi",
+        deathNote: "Death Note",
+        bungo: "Bungo Stray Dogs",
+        deathParade: "Death Parade",
+        baccano: "Baccano",
+        apothecary: 'The Apothecary Diaries',
+        orb: "Orb: On the Movements of the Earth",
+        oddTaxi: "Odd Taxi",
+        durarara: "Durarara",
+        monogatari: "Bakemonogatari",
+        steins: "Steins;Gate",
+        promised: "The Promised Neverland",
+        cpk: "Cosmic Princess Kaguya!",
+        eupho: "Sound! Euphonium",
+        carole: "Carole & Tuesday",
+        myGo: "BanG Dream! It's MyGO!!!!!",
+        cry: "Girls Band Cry",
+        spyFamily: "Spy x Family",
+        joshiraku: "Joshiraku",
+        grandBlue: "Grand Blue",
+        konosuba: "KonoSuba: God's Blessing on This Wonderful World!",
+        gintama: "Gintama",
+        saiki: "The Disastrous Life of Saiki K.",
+        arakawa: "Arakawa Under the Bridge",
+        angelBeats: "Angel Beats!",
+        kakushigoto: "Kakushigoto",
+        eizouken: "Keep Your Hands Off Eizouken!",
+        dragonMaid: "Miss Kobayashi's Dragon Maid",
+        gochiUsa: "Is the Order a Rabbit?",
+        yuruCamp: "Laid-Back Camp",
+        nonNonBiyori: "Non Non Biyori",
+        kOn: "K-On!",
+        bocchi: "Bocchi the Rock",
+        zombieland: "Zombieland Saga",
+        kongMing: "Ya Boy Kongming!"
     }
 
     window.addEventListener('load', function(){
         start.addEventListener('click', function() {
             initialText.className = 'off';
+            resetBtn.className = 'resetOn';
             changeDisplay("-type");
         });  
     });
+
+    resetBtn.addEventListener('click', function(){
+        location.reload();
+    })
 
     function changeDisplay(questionID) {
         const question = document.querySelector(`#q${questionID}`);
@@ -448,6 +512,8 @@
     function showResult(answer) {
         const result = document.querySelector(`#result`);
         const titleDisplay = document.querySelector('#result h3'); 
+
+        resetBtn.className = 'off';
         
         console.log(answer);
 
@@ -616,6 +682,57 @@
                 break;
             case '-type2-romance-yaoi-pureRom-noAgeGap':
                 resultID = 'given';
+                break;
+            case '-type2-drama-emotional-realWorld':
+                resultID = 'universe';
+                break;
+            case '-type2-drama-emotional-fantasyWorld':
+                resultID = 'violet';
+                break;
+            case '-type2-drama-notEmotional-realWorld-dramaSlow-short':
+                resultID = 'journal';
+                break;
+            case '-type2-drama-notEmotional-realWorld-dramaSlow-long':
+                resultID = 'march';
+                break;
+            case '-type2-mystery-mysteryFantasy-pop-long-mysteryPlot':
+                resultID = 'deathNote';
+                break;
+            case '-type2-mystery-mysteryFantasy-pop-long-mysteryAction':
+                resultID = 'bungo';
+                break;
+            case '-type2-mystery-mysteryFantasy-niche-short-mysteryPlot':
+                resultID = 'deathParade';
+                break;
+            case '-type2-mystery-mysteryFantasy-niche-short-mysteryAction':
+                resultID = 'baccano';
+                break;
+            case '-type2-mystery-mysteryReal-pop':
+                resultID = 'apothecary';
+                break;
+            case '-type2-music1-pop-short':
+                resultID = 'cpk';
+                break;
+            case '-type2-music1-pop-long':
+                resultID = 'eupho';
+                break;   
+            case '-type3-comedy-pop-family':
+                resultID = 'spyFamily';
+                break;
+            case "-type3-comedy-niche-notEmotional-subculture-family":
+                resultID = 'joshiraku';
+                break;
+            case "-type3-comedy-niche-notEmotional-subculture-nsfw":
+                resultID = 'grandBlue';
+                break;
+            case "-type3-sliceOfLife-sliceRelax-fantasyWorld":
+                resultID = 'eizouken';
+                break;
+            case "-type3-music2-pop-long":
+                resultID = 'kOn';
+                break;
+            case "-type3-music2-pop-short":
+                resultID = 'bocchi';
                 break;
             default:
                 resultID = answer;

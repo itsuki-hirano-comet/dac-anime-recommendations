@@ -10,16 +10,19 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+
+
     <link href="styles.css" rel="stylesheet">
     <script src="script.js" defer></script>
 
-    <title>Prototype Anime Akinator</title>
+    <title>DACkinator</title>
 </head>
 <body>
     <header>
         
         <img src="images/logo.png" alt="DAC Logo" id="logo" width="563" height="448">
-        <h1>Anime Akinator prototype</h1>
+        <h1>DACkinator</h1>
     </header>
         
     <main>
@@ -349,7 +352,7 @@
         <section class="off" id="q-type2-horror-scare">
             <h2>Which do you prefer? A show with...</h2>
             <div class="options">
-                <div class="answerFinal" id="summerHikaruDied"><p>some mystery elements</p></div>
+                <div class="answerFinal" id="hikaru"><p>some mystery elements</p></div>
                 <div class="answer" id="horrorAction"><p>some action</p></div>
             </div>       
         </section>
@@ -358,7 +361,7 @@
             <h2>Which interests you more? A show about...</h2>
             <div class="options">
                 <div class="answerFinal" id="darkGathering"><p>Ghost hunting</p></div>
-                <div class="answerFinal" id="summertimeRender"><p>Deadly doppelgangers</p></div>
+                <div class="answerFinal" id="render"><p>Deadly doppelgangers</p></div>
             </div>       
         </section>
 
@@ -382,7 +385,7 @@
             <h2>Which do you prefer? A show about...</h2>
             <div class="options">
                 <div class="answerFinal" id="madoka"><p>Magical girls</p></div>
-                <div class="answerFinal" id="madeInAbyss"><p>Exploring the unknown</p></div>
+                <div class="answerFinal" id="abyss"><p>Exploring the unknown</p></div>
             </div>       
         </section>
 
@@ -400,7 +403,7 @@
             <div class="options">
                 <div class="answerFinal" id="blueLock"><p>Soccer</p></div>
                 <div class="answerFinal" id="kuroko"><p>Basketball</p></div>
-                <div class="answerFinal" id="haikyuu"><p>Haikyuu</p></div>
+                <div class="answerFinal" id="haikyu"><p>Volleyball</p></div>
             </div>       
         </section>
 
@@ -408,7 +411,7 @@
             <h2>Which are you intersted in?</h2>
             <div class="options">
                 <div class="answerFinal" id="uma"><p>Racing</p></div>
-                <div class="answerFinal" id="megaloBox"><p>Boxing</p></div>
+                <div class="answerFinal" id="megalo"><p>Boxing</p></div>
             </div>       
         </section>
 
@@ -416,7 +419,7 @@
             <h2>Which are you intersted in?</h2>
             <div class="options">
                 <div class="answerFinal" id="free"><p>Swimming</p></div>
-                <div class="answerFinal" id="pingPong"><p>Ping Pong</p></div>
+                <div class="answerFinal" id="pong"><p>Ping Pong</p></div>
                 <div class="answerFinal" id="medalist"><p>Figure Skating</p></div>
                 <div class="answerFinal" id="tsurune"><p>Archery</p></div>
             </div>       
@@ -475,7 +478,7 @@
         <section class="off" id="q-type2-mystery-mysteryFantasy-pop-short">
             <h2>Which interess you more?</h2>
             <div class="options">
-                <div class="answerFinal" id="steinsGate"><p>Time travelling mystery</p></div>
+                <div class="answerFinal" id="steins"><p>Time travelling mystery</p></div>
                 <div class="answerFinal" id="promised"><p>Suspenseful escape from monsters</p></div>
             </div>       
         </section>
@@ -500,8 +503,8 @@
         <section class="off" id="q-type2-music1-niche-rock">
             <h2>Are you interested in rhythm games?</h2>
             <div class="options">
-                <div class="answerFinal" id="myGo-aveMuji"><p>Yes</p></div>
-                <div class="answerFinal" id="girlsBandCry"><p>No</p></div>
+                <div class="answerFinal" id="myGo"><p>Yes</p></div>
+                <div class="answerFinal" id="cry"><p>No</p></div>
             </div>       
         </section>
 
@@ -589,6 +592,11 @@
                 <h3>Fullmetal Alchemist Brotherhood</h3>
             </div>
         </section>
+
+        <div id="resetButton" class="off">
+            <i class="fa-solid fa-arrow-rotate-left"></i>
+        </div>
+        
     </main>
 </body>
 </html>
